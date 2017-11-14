@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+
+</head>
+<style type="text/css">
+	a{TEXT-DECORATION:none}
+    *{margin:0px;
+    padding:0px;
+    border:0px;
+    }
+    html,body{
+    width:100%;
+    height:100%;}
+    .blog-top{
+    width:1000px;
+    height:250px;
+    margin:auto;
+    background-image: url(back2.png);
+    }
+    .userface{
+    width:80px;
+    height:80px;
+    padding-top:140px;
+    padding-left:30px;
+    float:left;
+    display:inline;
+    }
+    .blogtwo{
+    	width:180px;
+    	height:80px;
+        float:left;
+        display:inline;
+        padding-top:140px;
+        padding-left: 20px;
+    }
+    .blogname{
+    width:180px;
+    display:inline;
+    text-align:center;
+    }
+    .userlead{
+    width:180px;
+    display:inline;
+    }
+    .container{
+    	position: relative;
+    	width: 1000px;
+    	height: 100%;
+    	margin: 0px auto;
+    }
+    .left{
+    	width: 200px;
+    	height:100%;
+    	border-style: solid;
+    	border-color: #C0C0C0;
+    	border-width: 1px;
+    	position: absolute;
+    	top: 0px;
+    	left: 0px;
+    }
+    
+    .right{
+    	width: 200px;
+    	height:100%;
+    	position: absolute;
+    	top: 0px;
+    	right: 0px;
+    }
+    .center{
+    	height:100%;
+    	border-style: solid;
+    	border-color: #C0C0C0;
+    	border-width: 1px;
+    	margin:5px 210px 5px 210px;
+
+    }   
+
+    .information{
+    width:100%;
+    height:20px;
+    background-color:#FFE4E1;
+    }
+    .userimg{
+    width:100%;
+    height:160px;
+    boder:1px solid #A9A9A9;
+    margin-top: 20px;
+    }
+    .username{
+    width:100%;
+    height:50px;
+    text-align:center;
+    }
+    .user-information{
+    width:100%;
+    height:200px;
+    line-height:20px;
+    text-indent:40px;
+    }
+    .essay{
+    	width: 100%;
+    	height: 250px;
+    	border-style: solid;
+    	border-color: #C0C0C0;
+    	border-width: 1px;
+    }
+    .visitor-comment{
+    	width: 100%;
+    	height: 200px;
+    	border-style: solid;
+    	border-color: #C0C0C0;
+    	border-width: 1px;
+    	margin-top: 5px;
+    }
+    .classification{
+    	width:100%;
+        height:20px;
+        background-color:#FFE4E1;
+    }
+    .comment{
+    	width:100%;
+        height:20px;
+        background-color:#FFE4E1;
+    }
+    .user-essay{
+    	width:100%;
+        height:20px;
+        background-color:#FFE4E1;
+    }
+	.nav{
+		margin-left:20px;
+		list-style-position:inside;
+		
+		}
+    </style>
+<body>
+	<div id="blog-top" class="blog-top">
+            <div class="userface" >
+              <img src="image/userimg.png" width="80" height="80"/>
+                
+            </div>
+            <div class="blogtwo">
+            <div class="blogname">
+                <font face="微软雅黑" size="5" color="#F8F8FF">梁姗姗的博客</font>
+                <br><br>
+              
+            </div>
+            <div class="bloglead">
+            	<span><a href="success.html">首页&brvbar;</a> </span>
+              <span><a href="essay.html">博文目录&brvbar; </a></span>
+              <span><a href="comment.html">评论管理</a></span>
+            </div>
+            </div>
+     </div>
+<div id="container" class="container">
+    <div id="left" class="left">
+    	<div class="information"><font size="1" color="#A9A9A9"><b>个人资料</b></font></div>
+        <div class="userimg" align="center"><img src="userimg.png" width="150" height="150"/></div>
+        <div class="username"><font face="微软雅黑" size="3" color="#708090">梁姗姗的博客</font></div>
+        <div class="user-information">这是梁姗姗的个人博客,我是梁姗姗，个人博客设计</div>
+    </div>
+    <div id="right" class="right">
+    <div class="essay">
+    	<div class="classification"><font size="1" color="#A9A9A9">分类</font></div>
+        <div class="nav">
+        <ul>
+        <li><a href="${pageContext.request.contextPath }/sort.action?type=1" target="content">移动开发</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=2" target="content">web前端</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=3" target="content">架构设计</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=4" target="content">编程语言</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=5" target="content">互联网</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=6" target="content">数据库</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=7" target="content">系统运维</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=8" target="content">云计算</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=9" target="content">研发管理</a></li>
+	<li><a href="${pageContext.request.contextPath }/sort.action?type=10" target="content">综合</a></li>
+    </ul>
+    </div>
+	<br>
+    </div>
+    <div class="visitor-comment">
+    	<div class="comment"><font size="1" color="#A9A9A9">评论</font></div>
+    </div>
+    </div>
+    <div id="center" class="center">
+    <div class="user-essay"><font size="1" color="#A9A9A9">博文</div>dfsdfsd
+    </div>
+    	
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+    <package name="xxxx" extends="struts-default"  >
+
+    <!--处理登录  -->
+        <action name="login" class="team.blog.action.LoginAction" method="execute">
+            <result name="success">index/newcontent.jsp</result>
+
+        </action>
+        
+        <!--处理展示文章-->
+          <action name="showAllArticle" class="team.blog.action.ShowAllAction" method="execute">
+            <result name="success">/newshowall.jsp</result>
+            <result name="manage">index/newmanage.jsp</result>
+        </action>
+        <!--展示的文章  -->
+        <action name="showArticle" class="team.blog.action.ShowArticle" method="execute">
+            <result name="success">/new_showarticle.jsp</result>
+            
+        </action>
+         <!--处理文章的评论利用action链  -->
+         <action name="saveCommentAction" class="team.blog.action.SaveComentAction" method="execute">
+            <result name="success" type="chain">showArticle</result>
+        </action>
+        <!--选择不同的文章展示  -->
+         <action name="sort" class="team.blog.action.ShowAllAction" method="sort">
+            <result name="sort" >index/newcontent.jsp</result>
+        </action>
+	<!--管理操作文章  -->
+         <action name="remove" class="team.blog.action.ArticleAction" method="delete">
+            <result name="success" type="chain">showAllArticle</result>
+        </action>
+    <!--管理操作评论  -->
+         <action name="getcomment" class="team.blog.action.CommentAction" method="getcomment">
+            <result name="success">/index/newmcomment.jsp</result>
+        </action>
+    <!--管理操作评论  -->
+         <action name="removecomment" class="team.blog.action.CommentAction" method="delete">
+            <result name="delete" type="chain" >getcomment</result>
+        </action>
+     <!--发布文章  -->
+         <action name="publish" class="team.blog.action.ArticleAction" method="publish">
+            <result name="publish"  type="chain">login</result>
+        </action>
+	<!--修改获取文章  -->
+         <action name="amend" class="team.blog.action.ArticleAction" method="amend">
+            <result name="amend"  >amend.jsp</result>
+        </action>
+	<!--更新文章  -->
+         <action name="update" class="team.blog.action.ArticleAction" method="update">
+            <result name="update"  type="chain">login</result>
+        	</action>
+    <!--回复操作  -->
+        <action name="reply" class="team.blog.action.CommentAction" method="reply">
+            <result name="reply">/new_showarticle.jsp</result>
+            
+        </action>
+     <!--游客选择不同的文章展示  -->
+         <action name="sort2" class="team.blog.action.ShowAllAction" method="sort2">
+            <result name="sort2" >newshowall.jsp</result>
+        </action>
+        
+
+        
+    </package>
+</struts>
+ 
+
